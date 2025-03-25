@@ -55,7 +55,7 @@ export default function Home() {
     })
 
     document.querySelectorAll(".style-button").forEach((btn) => {
-      btn.onclick = () => {
+      (btn as HTMLElement).onclick = () => {
         const ansiCode = (btn as HTMLElement).dataset.ansi
         if (!ansiCode) {
           textarea.innerText = textarea.innerText
@@ -82,7 +82,7 @@ export default function Home() {
         selection.addRange(range)
       }
 
-      btn.onmouseenter = () => {
+      (btn as HTMLElement).onmouseenter = () => {
         const ansiCode = (btn as HTMLElement).dataset.ansi
         if (!ansiCode || !(+ansiCode > 4)) return
 
@@ -93,7 +93,7 @@ export default function Home() {
         tooltip.style.left = `${rect.left - tooltip.clientWidth / 2 + btn.clientWidth / 2}px`
       }
 
-      btn.onmouseleave = () => {
+      (btn as HTMLElement).onmouseleave = () => {
         tooltip.style.display = "none"
       }
     })
