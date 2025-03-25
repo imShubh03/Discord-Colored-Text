@@ -173,7 +173,7 @@ export default function Home() {
         (err) => {
           if (copyCount > 2) return
           alert("Copying failed for some reason, let's try showing an alert, maybe you can copy it instead.")
-          alert(toCopy)
+          alert(err)
         },
       )
     }
