@@ -227,7 +227,7 @@ export default function Home() {
             Create your text
           </Title>
 
-          <Group position="center" mt="sm" spacing="xs" style={{ display: "flex", justifyContent: "center", width: "100%" }}>
+          <Group mt="sm" gap="xs" style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%" }}>
             <Button
               data-ansi="0"
               className="style-button"
